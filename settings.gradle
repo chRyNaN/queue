@@ -1,0 +1,4 @@
+rootProject.name = 'queue'
+include 'queue-common'
+include 'queue-jvm'
+include 'queue-js'

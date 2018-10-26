@@ -1,0 +1,12 @@
+apply plugin: 'kotlin-platform-common'
+
+group 'com.chrynan'
+version '0.1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-common"
+}
