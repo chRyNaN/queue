@@ -12,12 +12,12 @@ implementation 'com.github.chRyNaN.queue:queue-common:VERSION'
 
 **JVM:**
 ```groovy
-implementation 'com.github.chRyNaN.queue:queue-jvm:v0.1.1'
+implementation 'com.github.chRyNaN.queue:queue-jvm:VERSION'
 ```
 
 **JS:**
 ```groovy
-implementation 'com.github.chRyNaN.queue:queue-js:v0.1.1'
+implementation 'com.github.chRyNaN.queue:queue-js:VERSION'
 ```
 
 ## Using the library
