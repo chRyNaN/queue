@@ -33,11 +33,11 @@ open class MutableListDeque<T : Any> : Collection<T>,
 
     override fun addFirst(element: T) = mutableList.add(0, element)
 
-    override fun addLast(element: T) = mutableList.add(mutableList.size - 1, element)
+    override fun addLast(element: T) = mutableList.add((mutableList.size - 1).coerceAtLeast(0), element)
 
     override fun addAllFirst(elements: Collection<T>) = mutableList.addAll(0, elements)
 
-    override fun addAllLast(elements: Collection<T>) = mutableList.addAll(mutableList.size - 1, elements)
+    override fun addAllLast(elements: Collection<T>) = mutableList.addAll((mutableList.size - 1).coerceAtLeast(0), elements)
 
     override fun removeFirst(): T {
         if (mutableList.isEmpty()) throw NoSuchElementException("Cannot call removeFirst() on Deque because there are no elements.")

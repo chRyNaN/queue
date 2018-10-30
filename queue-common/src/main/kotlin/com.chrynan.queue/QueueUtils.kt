@@ -14,7 +14,7 @@ inline fun <reified T : Any> dequeOf(vararg elements: T): Deque<T> = MutableList
 
 inline fun <reified T : Any> mutableDequeOf(vararg elements: T): MutableDeque<T> = MutableListDeque<T>().apply { addAllFirst(listOf(*elements)) }
 
-inline fun <reified T : Any> Deque<T>.toMutableDeque(): MutableDeque<T> {
+inline fun <reified T : Any> Collection<T>.toMutableDeque(): MutableDeque<T> {
     val deque = MutableListDeque<T>()
 
     deque.addAllFirst(toList())
@@ -22,7 +22,7 @@ inline fun <reified T : Any> Deque<T>.toMutableDeque(): MutableDeque<T> {
     return deque
 }
 
-inline fun <reified T : Any> MutableDeque<T>.toDeque(): Deque<T> {
+inline fun <reified T : Any> Collection<T>.toDeque(): Deque<T> {
     val deque = MutableListDeque<T>()
 
     deque.addAllFirst(toList())
@@ -30,7 +30,7 @@ inline fun <reified T : Any> MutableDeque<T>.toDeque(): Deque<T> {
     return deque
 }
 
-inline fun <reified T : Any> Queue<T>.toMutableQueue(): MutableQueue<T> {
+inline fun <reified T : Any> Collection<T>.toMutableQueue(): MutableQueue<T> {
     val queue = FIFOQueue<T>()
 
     queue.addAll(toList())
@@ -38,10 +38,14 @@ inline fun <reified T : Any> Queue<T>.toMutableQueue(): MutableQueue<T> {
     return queue
 }
 
-inline fun <reified T : Any> MutableQueue<T>.toQueue(): Queue<T> {
+inline fun <reified T : Any> Collection<T>.toQueue(): Queue<T> {
     val queue = LIFOQueue<T>()
 
     queue.addAll(toList())
 
     return queue
 }
+
+fun <T : Any> emptyDeque(): Deque<T> = EmptyDeque
+
+fun <T : Any> emptyQueue(): Queue<T> = EmptyQueue
