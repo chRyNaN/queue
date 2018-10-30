@@ -38,7 +38,7 @@ class QueueTest {
     }
 
     @Test
-    fun removeShouldReturnsTheCorrectItem() {
+    fun removeShouldReturnsTheFirstItem() {
         val queue = mutableQueueOf("One", "Two")
 
         assertEquals("One", queue.remove())
@@ -140,7 +140,7 @@ class QueueTest {
     }
 
     @Test
-    fun addAllShouldAddAllElementsToTheEndOfTheQueue(){
+    fun addAllShouldAddAllElementsToTheEndOfTheQueue() {
         val queue = mutableQueueOf("One", "Two")
 
         queue.addAll(listOf("Three", "Four", "Five"))
@@ -149,7 +149,7 @@ class QueueTest {
     }
 
     @Test
-    fun pushAllShouldAddAllElementsToTheEndOfTheQueue(){
+    fun pushAllShouldAddAllElementsToTheEndOfTheQueue() {
         val queue = mutableQueueOf("One", "Two")
 
         queue.pushAll(listOf("Three", "Four", "Five"))
