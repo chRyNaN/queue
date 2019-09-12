@@ -1,6 +1,6 @@
 package com.chrynan.queue
 
-class LIFOQueue<T : Any> : MutableListDeque<T>(),
+open class LIFOQueue<T : Any> : MutableListDeque<T>(),
         Collection<T>,
         Queue<T>,
         MutableQueue<T> {

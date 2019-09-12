@@ -1,6 +1,6 @@
 package com.chrynan.queue
 
-object EmptyIterator : ListIterator<Nothing> {
+object EmptyIterator : MutableListIterator<Nothing> {
 
     override fun hasNext() = false
 
@@ -13,4 +13,10 @@ object EmptyIterator : ListIterator<Nothing> {
     override fun next() = throw NoSuchElementException()
 
     override fun previous() = throw NoSuchElementException()
+
+    override fun add(element: Nothing) = throw IllegalStateException()
+
+    override fun remove() = throw IllegalStateException()
+
+    override fun set(element: Nothing) = throw IllegalStateException()
 }
