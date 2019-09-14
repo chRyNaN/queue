@@ -70,4 +70,9 @@ publishing {
             }
         }
     }
+    publications {
+        jvm {
+            groupId = ""
+        }
+    }
 }
