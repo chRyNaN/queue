@@ -60,11 +60,17 @@ configurations {
 }
 
 
-
 publishing {
     repositories {
         maven {
             url = uri("https://maven.pkg.github.com/chRyNaN")
+            credentials(HttpHeaderCredentials) {
+                name = "Authorization"
+                value = "Bearer ${System.getenv("GITHUB_TOKEN")}"
+            }
+            authentication {
+                header(HttpHeaderAuthentication)
+            }
         }
     }
 }
