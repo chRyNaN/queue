@@ -63,7 +63,7 @@ configurations {
 publishing {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/chRyNaN")
+            url = uri("https://maven.pkg.github.com/chRyNaN/queue")
             credentials(HttpHeaderCredentials) {
                 name = "Authorization"
                 value = "${System.getenv("GITHUB_TOKEN")}"
