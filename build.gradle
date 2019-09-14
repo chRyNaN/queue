@@ -53,6 +53,11 @@ kotlin {
             }
         }
     }
+    jvm {
+        mavenPublication {
+            groupId = "queue"
+        }
+    }
 }
 
 configurations {
