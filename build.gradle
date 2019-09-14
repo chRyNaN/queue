@@ -53,11 +53,6 @@ kotlin {
             }
         }
     }
-    jvm {
-        mavenPublication {
-            groupId = "queue"
-        }
-    }
 }
 
 configurations {
@@ -68,7 +63,7 @@ configurations {
 publishing {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/chRyNaN")
+            url = uri("https://maven.pkg.github.com/chRyNaN/queue")
             credentials {
                 username = "chRyNaN"
                 password = System.getenv("GITHUB_TOKEN")
