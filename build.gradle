@@ -19,6 +19,8 @@ apply plugin: 'kotlin-multiplatform'
 
 apply plugin: 'maven-publish'
 
+apply plugin: 'maven'
+
 repositories {
     jcenter()
     mavenCentral()
@@ -55,4 +57,14 @@ kotlin {
 
 configurations {
     compileClasspath
+}
+
+
+
+publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/chRyNaN")
+        }
+    }
 }
