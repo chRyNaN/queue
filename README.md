@@ -4,7 +4,7 @@ Stack, Queue, and Deque Data Structures for Kotlin
 ![](https://github.com/chRyNaN/queue/workflows/Kotlin%20CI/badge.svg)
 ![](https://github.com/chRyNaN/queue/workflows/Tests/badge.svg)
 
-[![](https://jitpack.io/v/chRyNaN/queue.svg)](https://jitpack.io/#chRyNaN/queue)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/chRyNaN/queue?style=flat-square)
 
 ## Building
 
