@@ -15,5 +15,6 @@ jobs:
           java-version: 1.8
       - name: Gradle Publish
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: "chRyNaN"
+          PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         run: ./gradlew publish
