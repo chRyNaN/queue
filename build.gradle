@@ -1,5 +1,5 @@
 ext {
-    appVersion = '1.0.0'
+    appVersion = '1.0.1'
     appVersionCode = 1
 }
 
@@ -64,7 +64,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/chRyNaN/queue-jvm")
+            url = uri("https://maven.pkg.github.com/chRyNaN/queue")
             credentials {
                 username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
                 password = project.findProperty("gpr.key") ?: System.getenv("PASSWORD")
